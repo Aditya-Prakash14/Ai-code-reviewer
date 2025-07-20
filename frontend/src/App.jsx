@@ -6,7 +6,7 @@ import './App.css';
 // Import PrismJS CSS
 import 'prismjs/themes/prism-tomorrow.css';
 
-const API_BASE_URL = 'http://localhost:3000/api/ai';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000/api/ai';
 
 const CodeReviewer = () => {
   const [code, setCode] = useState('');

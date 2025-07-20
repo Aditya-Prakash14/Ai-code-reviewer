@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "name": "ai-code-reviewer-backend",
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/server.js"
+    }
+  ],
+  "env": {
+    "GOOGLE_GEMINI_KEY": "@google_gemini_key"
+  }
+}
